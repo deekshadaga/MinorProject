@@ -1,0 +1,108 @@
+body{
+    background-image:linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url("wallpapermp.jpg");
+}
+.ftco-section{
+    padding:60px 20px 30px
+}
+h1.title,h2.title,h3.title{
+    font-weight:600;
+    font-size:29px;
+    margin-bottom:15px
+}
+.mw70{
+    max-width:700px;
+    margin:0 auto
+}
+.listitem{
+    display:flex;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
+    justify-content:center;
+    width:100%;
+    margin-top:40px
+}
+.listitem li{
+    width:30%;
+    background:#fff;
+    box-shadow:0 13px 30px rgba(0,0,0,.11);
+    -moz-border-radius:17px;
+    -webkit-border-radius:17px;
+    -khtml-border-radius:17px;
+    border-radius:17px;
+    margin:0 30px 0 0
+}
+.listitem li:nth-child(3n){
+    margin-right:0
+}
+.listitem li .post-image{
+    height:220px;
+    display:flex;
+    justify-content:center;
+    -moz-border-radius:17px 17px 0 0;
+    -webkit-border-radius:17px 17px 0 0;
+    -khtml-border-radius:17px 17px 0 0;
+    border-radius:17px 17px 0 0
+}
+.bg1{
+    background:#d2e3fc
+}
+.bg2{
+    background:#fad2cf
+}
+.bg3{
+    background:#ceead6
+}
+.bg4{
+    background:#feefc3
+}
+.bg5{
+    background:#ffd5ec
+}
+.bg6{
+    background:#d1f4ff
+}
+.listitem li .post-content{
+    padding:20px;
+    text-align:left
+}
+.listitem li .post-content h3{
+    font-size:17px;
+    font-weight:600;
+    margin-bottom:10px
+}
+.listitem li .post-content p{
+    line-height:18px;
+    margin-bottom:0
+}
+.copyright{
+    background:#4a474c;
+    color:#fff;
+    padding:30px 0;
+    text-align:center;
+    margin-top:20px
+}
+.copyright ul{
+    justify-content:center;
+    margin-bottom:15px
+}
+.copyright ul a{
+    color:#fff;
+    font-weight:600;
+    display:inline-block;
+    padding:0 25px
+}
+.flex{
+    display:flex
+}
+.flex-a-i-center{
+    align-items:center
+}
+.ftco-section{
+    padding:60px 20px 30px
+}
+h1.title,h2.title,h3.title{
+    font-weight:600;
+    font-size:29px;
+    margin-bottom:15px
+}
+
