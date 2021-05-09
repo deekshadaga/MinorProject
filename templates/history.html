@@ -1,0 +1,59 @@
+{% extends 'basel.html' %}
+
+{% block body %}
+<br><br>
+<div class="container my-3">
+    <h2>Your History --></h2>
+    
+            {% if allhistory|length == 0 %}
+               
+            <div class="alert alert-dark" role="alert">
+                No History found. Download your first YouTube content now!
+              </div>
+                {% else %} 
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">SNo</th>
+                        <th scope="col">YouTube link</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+          {% for history in allhistory %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{history.title}}</td>
+            <td>{{history.typeof}}</td>
+            <td>{{history.date}}</td>
+            <td>
+            <a href="/delete/{{history.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Delete</button>
+            </td>
+          </tr>
+          
+          {% endfor %}
+        </tbody>
+        </table>
+          {% endif %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% endblock body %}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/style.js') }}"></script>
+    <title> YouTube Extractor-{{username}}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/indexl?username={{username}}">YTExtractor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/indexl?username={{username}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutl?username={{username}}">About</a>
+                    </li>
+                </ul>
+                <a class="nav-link" aria-current="page" href="/indexl?username={{username}}">hello
+                        {{username}}</a>
+                <a href='/history?username={{username}}' type="button" class="btn btn-outline-light btn-sm mx-1">History</a>
+                <a href='/' type="button" class="btn btn-outline-light btn-sm mx-1">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3">
+        <u>
+            <h1 align=center>YouTube Extractor</h1>
+        </u>
+        <p class="mw70">YouTube Extractor helps you download Youtube videos, audios or playlists to your device.</p><br><br>
+
+        {% block body %}
+
+        {% endblock body %}
+
+        <footer>
+            <div class="copyright">
+            <ul class="flex flex-a-i-center" style="list-style-type:none">
+            <li><a href="/contact-us">Contact us : deekshadaga2014@gmail.com</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of service</a></li>
+            </ul>
+            <p class="mag0"> © 2021 ytextractor.com </p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title> Login </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/login.css') }}">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">YTExtractor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br></br>
+<div class="container my-3">
+  <u>
+      <h1 align=center>Welcome Back to YouTube Extractor !</h1>
+  </u>
+  </div>
+  <div align="center">
+    <div align="center" class="border">
+      <div class="header">
+      </div></br></br></br>
+      <h2 class="word">
+        <form action="{{ url_for('login') }}" method="post">
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <ul class=flashes style="list-style-type:none">
+            {% for message in messages %}
+            <li>{{ message }} </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% endwith %} 
+          <input id="username" name="username" type="text" placeholder="Enter Your Username"
+            class="textbox" ></br></br>
+          <input id="password" name="password" type="password" placeholder="Enter Your Password"
+            class="textbox" ></br><br>
+          <input type="submit" class="btn btn-dark" value="Sign In"></br></br>
+        </form>
+      </h2>
+      <b><p class="bottom">Dont't have an account? <a class="bottom" href="{{url_for('register')}}"> Sign Up here</a></p>
+    </div></b>
+  </div>
+</body>
+
+</html>
